@@ -3,6 +3,9 @@ package TestSyntax; //определение пакета TestSyntax
 //Объявление класса Syntax
 public class Syntax {
 
+    //Статические(глобальные) переменные
+    static public int global = 100; //переменная может быть изменена и вызвана в любом месте программы
+
     //Имена переменных в Java
     public static void testNames() {
 
@@ -19,6 +22,11 @@ public class Syntax {
 
         System.out.println("Первое число: " + Value);
         System.out.println("Второе число: " + VALUE);
+
+        //Константы
+        final int constant = 333; //Константа объявляется также, как и переменная,
+                                  // только вначале идет ключевое слово final
+        // constant = 33; - Ошибка
     }
 
     //Примитивные типы Java
