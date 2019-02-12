@@ -1,4 +1,4 @@
-package TestSyntax; //определение пакета TestSyntax
+package test.syntax; //определение пакета test
 
 //Объявление класса Syntax
 public class Syntax {

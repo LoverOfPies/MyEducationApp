@@ -20,7 +20,7 @@
  *
  */
 
-import TestSyntax.Syntax; //Импорт класса Syntax из пакета TestSyntax
+import test.syntax.Syntax; //Импорт класса Syntax из пакета test.syntax
 
 public class Main {
     /*Выполнение программы на Java начинается с вызова метода main()
