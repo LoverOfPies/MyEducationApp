@@ -21,6 +21,7 @@
  */
 
 import test.syntax.Syntax; //Импорт класса Syntax из пакета test.syntax
+import test.OOP.Animal;
 
 public class Main {
     /*Выполнение программы на Java начинается с вызова метода main()
@@ -31,6 +32,15 @@ public class Main {
     public static void main(String args[]) {
         //в выражении String args[] объявляется параметр
         //args обозначающий массив экземпляров класса String
+
+        Animal cat = new Animal("Cat");
+        Animal dog = new Animal();
+
+        // System.out.println(cat.name); //Ошибка так как поле name имеет модификатор private
+        System.out.println(cat.getName()); //Получаем имя животного через метод
+        System.out.println(dog.getName()); //Выведет null так как имя не было задано
+        dog.setName("Dog"); //Задаем имя животного через метод
+        System.out.println(dog.getName()); //Теперь будет выведено Dog
 
         Syntax.testNames(); //Можно вызвать метод без создания объекта класса, так как у него есть модификатор static
     }
