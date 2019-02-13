@@ -21,7 +21,7 @@
  */
 
 import test.syntax.Syntax; //Импорт класса Syntax из пакета test.syntax
-import test.OOP.Animal;
+import test.oop.WildAnimal;
 
 public class Main {
     /*Выполнение программы на Java начинается с вызова метода main()
@@ -33,11 +33,11 @@ public class Main {
         //в выражении String args[] объявляется параметр
         //args обозначающий массив экземпляров класса String
 
-        Animal cat = new Animal("Cat");
-        Animal dog = new Animal();
+        WildAnimal tiger = new WildAnimal("Tiger"); //Создаём объект класса Animal с name = Cat
+        WildAnimal dog = new WildAnimal(); //Создаём объект класса Animal с полями по умолчанию
 
         // System.out.println(cat.name); //Ошибка так как поле name имеет модификатор private
-        System.out.println(cat.getName()); //Получаем имя животного через метод
+        System.out.println(tiger.getName()); //Получаем имя животного через метод
         System.out.println(dog.getName()); //Выведет null так как имя не было задано
         dog.setName("Dog"); //Задаем имя животного через метод
         System.out.println(dog.getName()); //Теперь будет выведено Dog
