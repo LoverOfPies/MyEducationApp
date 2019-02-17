@@ -20,8 +20,14 @@
  *
  */
 
+import test.oop.HomeAnimal;
 import test.syntax.Syntax; //Импорт класса Syntax из пакета test.syntax
 import test.oop.WildAnimal;
+import test.oop.AnimalLive;
+
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
     /*Выполнение программы на Java начинается с вызова метода main()
@@ -33,15 +39,28 @@ public class Main {
         //в выражении String args[] объявляется параметр
         //args обозначающий массив экземпляров класса String
 
-        WildAnimal tiger = new WildAnimal("Tiger"); //Создаём объект класса Animal с name = Cat
-        WildAnimal dog = new WildAnimal(); //Создаём объект класса Animal с полями по умолчанию
+        WildAnimal tiger = new WildAnimal("Tiger", 4, 12); //Создаём объект класса Animal с name = Cat
+        WildAnimal wolf = new WildAnimal(); //Создаём объект класса Animal с полями по умолчанию
+        HomeAnimal cat = new HomeAnimal("Cat", 8);
 
         // System.out.println(cat.name); //Ошибка так как поле name имеет модификатор private
         System.out.println(tiger.getName()); //Получаем имя животного через метод
-        System.out.println(dog.getName()); //Выведет null так как имя не было задано
-        dog.setName("Dog"); //Задаем имя животного через метод
-        System.out.println(dog.getName()); //Теперь будет выведено Dog
+        System.out.println(wolf.getName()); //Выведет null так как имя не было задано
+        wolf.setName("Wolf"); //Задаем имя животного через метод
+        System.out.println(wolf.getName()); //Теперь будет выведено Dog
 
-        Syntax.testNames(); //Можно вызвать метод без создания объекта класса, так как у него есть модификатор static
+        //Методы объекта Tiger
+        tiger.hunt();
+
+        AnimalLive[] animals = new AnimalLive[3];
+        animals[0] = wolf;
+        animals[1] = tiger;
+        animals[2] = cat;
+
+        for (AnimalLive animal : animals){
+            animal.eat();
+        }
+
+        // Syntax.testNames(); //Можно вызвать метод без создания объекта класса, так как у него есть модификатор static
     }
 }
