@@ -1,6 +1,6 @@
 package test.oop;
 
-class Animal {
+public abstract class Animal  implements AnimalLive  {
     private String name;
     private int age;
 
@@ -21,4 +21,9 @@ class Animal {
     public int getAge(){
         return age;
     }
+
+    //Переопределение методов интерфейса AnimalLive
+    @Override
+    public void eat(){ System.out.println("Я " + getName() + " и я ем"); }
+    public void sleep(){ System.out.println("Я " + getName() + " и я сплю"); }
 }

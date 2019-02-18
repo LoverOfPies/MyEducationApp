@@ -1,6 +1,6 @@
 package test.oop;
 
-public interface AnimalLive {
+interface AnimalLive {
     void eat();
     void sleep();
 }

@@ -1,6 +1,6 @@
 package test.oop;
 
-public class WildAnimal extends Animal implements AnimalLive {
+public class WildAnimal extends Animal {
     private int size_fangs;
 
     //Конструктор по умолчанию

@@ -23,7 +23,7 @@
 import test.oop.HomeAnimal;
 import test.syntax.Syntax; //Импорт класса Syntax из пакета test.syntax
 import test.oop.WildAnimal;
-import test.oop.AnimalLive;
+import test.oop.Animal;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -39,9 +39,9 @@ public class Main {
         //в выражении String args[] объявляется параметр
         //args обозначающий массив экземпляров класса String
 
-        WildAnimal tiger = new WildAnimal("Tiger", 4, 12); //Создаём объект класса Animal с name = Cat
-        WildAnimal wolf = new WildAnimal(); //Создаём объект класса Animal с полями по умолчанию
-        HomeAnimal cat = new HomeAnimal("Cat", 8);
+        Animal tiger = new WildAnimal("Tiger", 4, 12); //Создаём объект класса Animal с name = Cat
+        Animal wolf = new WildAnimal(); //Создаём объект класса Animal с полями по умолчанию
+        Animal cat = new HomeAnimal("Cat", 8);
 
         // System.out.println(cat.name); //Ошибка так как поле name имеет модификатор private
         System.out.println(tiger.getName()); //Получаем имя животного через метод
@@ -49,16 +49,21 @@ public class Main {
         wolf.setName("Wolf"); //Задаем имя животного через метод
         System.out.println(wolf.getName()); //Теперь будет выведено Dog
 
-        //Методы объекта Tiger
-        tiger.hunt();
+        //Методы объекта Tiger, с приведением типов
+        ((WildAnimal) tiger).hunt();
+        ((WildAnimal) wolf).setSize_fangs(13);
+        System.out.println(((WildAnimal) wolf).getSize_fangs());
 
-        AnimalLive[] animals = new AnimalLive[3];
+        //Массив всех животных
+        Animal[] animals = new Animal[3];
         animals[0] = wolf;
         animals[1] = tiger;
         animals[2] = cat;
 
-        for (AnimalLive animal : animals){
+        //Реализация полиморфизма
+        for (Animal animal : animals){
             animal.eat();
+            animal.sleep();
         }
 
         // Syntax.testNames(); //Можно вызвать метод без создания объекта класса, так как у него есть модификатор static

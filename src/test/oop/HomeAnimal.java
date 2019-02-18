@@ -1,6 +1,7 @@
 package test.oop;
 
-public class HomeAnimal extends Animal implements AnimalLive {
+public class HomeAnimal extends Animal{
+
     public HomeAnimal(){};
 
     public HomeAnimal(String name, int age){
