@@ -20,6 +20,7 @@
  *
  */
 
+import test.collections.SetCollection;
 import test.exceptions.AgeException;
 import test.oop.AnimalsName;
 import test.oop.HomeAnimal;
@@ -84,5 +85,13 @@ public class Main {
         }
 
         // Syntax.testNames(); //Можно вызвать метод без создания объекта класса, так как у него есть модификатор static
+
+        //Set Collection
+        SetCollection setCollection = new SetCollection();
+        setCollection.setSortedSet();
+        setCollection.setNavigableSet();
+        setCollection.setTreeSet();
+        setCollection.setLinkedHashSet();
+        setCollection.setHashSet();
     }
 }
