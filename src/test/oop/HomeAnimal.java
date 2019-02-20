@@ -1,5 +1,7 @@
 package test.oop;
 
+import test.exceptions.AgeException;
+
 public class HomeAnimal extends Animal{
 
     public HomeAnimal(){};
@@ -8,6 +10,19 @@ public class HomeAnimal extends Animal{
         super(name, age);
     }
 
+    public void setCat(String name){
+        //Вложенный класс Cat
+        class Cat{
+            void write(){
+                System.out.println("Это кот " + name);
+                eat(); //может использовать методы главного класса
+            }
+        }
+
+        Cat cat = new Cat();
+        cat.write();
+
+    }
     @Override
     public void eat(){ System.out.println("Я " + getName() + " и я ем корм."); }
 

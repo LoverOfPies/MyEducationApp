@@ -1,6 +1,6 @@
-package test.Modificators.package2;
+package test.modificators.package2;
 
-import test.Modificators.package1.Class1;
+import test.modificators.package1.Class1;
 
 public class Class3 {
     public void ShowClass1(){

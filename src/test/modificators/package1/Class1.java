@@ -1,4 +1,4 @@
-package test.Modificators.package1;
+package test.modificators.package1;
 
 public class Class1 {
     private int a = 1;

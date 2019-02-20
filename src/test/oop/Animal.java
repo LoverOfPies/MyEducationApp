@@ -1,6 +1,8 @@
 package test.oop;
 
-public abstract class Animal  implements AnimalLive  {
+import test.exceptions.AgeException;
+
+public abstract class Animal  implements Live  {
     private String name;
     private int age;
 
@@ -17,7 +19,10 @@ public abstract class Animal  implements AnimalLive  {
         return name;
     }
 
-    public void setAge(int age){ this.age = age; }
+    public void setAge(int age) throws AgeException  {
+        if (age<0) throw new AgeException("Age less than 0", age);
+        this.age = age;
+    }
     public int getAge(){
         return age;
     }
