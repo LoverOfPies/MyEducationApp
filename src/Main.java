@@ -21,6 +21,7 @@
  */
 
 import test.collections.ListCollection;
+import test.collections.MapCollection;
 import test.collections.SetCollection;
 import test.exceptions.AgeException;
 import test.oop.AnimalsName;
@@ -143,6 +144,11 @@ public class Main {
         // в соответствие множество значений. В то же время одному элементу из множества значений
         // может соответствовать 1, 2 и более элементов из множества ключей.
         // Интерфейс java.util.Map<K,V> описывает функциональность ассоциативных массивов.
+        // Map Collection
+        MapCollection mapCollection = new MapCollection();
+        mapCollection.setHashMap();
+        mapCollection.setLinkedHashMap();
+        mapCollection.setTreeMap();
 
         // Итератор — объект, позволяющий перебирать элементы коллекции.
         // Например foreach реализован с использованием итератора.
